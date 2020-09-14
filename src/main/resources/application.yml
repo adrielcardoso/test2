@@ -3,6 +3,9 @@ server:
 zuul:
   sensitiveHeaders: usuario, clave
   routes:
+    public:
+      path: /public/**
+      url: http://10.252.135.118/public
     api:
       path: /api/**
-      url: http://10.252.135.118/
+      url: http://10.252.135.118/api

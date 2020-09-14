@@ -1,6 +1,7 @@
 package com.profesorp.zuulSpringTest;
 
 import com.profesorp.zuulSpringTest.Filters.APIPreRewriteFilter;
+import com.profesorp.zuulSpringTest.Filters.PublicPreRewriteFilter;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
@@ -17,5 +18,10 @@ public class ZuulSpringTestApplication {
     @Bean
     public APIPreRewriteFilter apiPreRewriteFilter() {
         return new APIPreRewriteFilter();
+    }
+
+    @Bean
+    public PublicPreRewriteFilter publicPreRewriteFilter() {
+        return new PublicPreRewriteFilter();
     }
 }
