@@ -1,0 +1,8 @@
+server:
+  port: 8081
+zuul:
+  sensitiveHeaders: usuario, clave
+  routes:
+    api:
+      path: /api/**
+      url: http://10.252.135.118/
