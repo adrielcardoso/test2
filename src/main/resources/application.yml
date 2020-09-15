@@ -3,9 +3,15 @@ server:
 zuul:
   sensitiveHeaders: usuario, clave
   routes:
+#    public:
+#      path: /public/**
+#      url: http://localhost:8002/
+#    api:
+#      path: /api/**
+#      url: http://localhost:8002/api
     public:
       path: /public/**
-      url: http://10.252.135.118/public
+      url: http://10.252.135.157:65000/
     api:
       path: /api/**
-      url: http://10.252.135.118/api
+      url: http://10.252.135.157:65000/api
